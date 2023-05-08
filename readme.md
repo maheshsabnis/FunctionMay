@@ -1,1 +1,53 @@
 # Azure Serverless Principal
+- Azure Functions
+	- Azure Based Serverless Object Model
+	- .NET 6 Runtime
+		- Use dotnet.exe to load the function code and execute
+	- .NET 6, 7 and V4 Isolated Process
+		- Use an isolated dedictaed Process to execute the function
+- .NET 6 Runtime
+	- Mirosoft.NET.Sdk.Functions
+		- An object model that has
+			- All Triggers
+			- Execution
+			- Resource Management
+				- Dependencies
+	- FunctionNameAttribute class
+		- The class taht is applied on the method to set behavior to that method as a function method
+			- function method, is the method that will be invoked inside the runtime based on Trigger
+	- local.settings.json
+		- Configuration file for local execution
+		- This will contains
+			- Connection String to Storage
+			- Any other configuration values which we cannot /  should not store in code
+	- host.json
+		- This will nbe usd by Azure DeploymentEnvironment
+		- Same as local.settings.json for Azure deployment
+- For deploying on Azure follow steps as mentioned below
+	- MUST have Azure Subscription
+		- https://azure.microsoft.com/en-us/free/
+	- Create a resource group
+		- A Logical Container (Like Folder) where all the Azure Resources e.g. Storage, VM, API App, Databse etc. are stored
+	- We can create an Azure Function using Azure Portla inside the resource group
+	- Selecting Deployment Plan for Azure Function
+		- Consumption (Serverless)
+			- Optimized for serverless and event-driven workloads.  	
+				- CPU, RAM and other resource will be allocated only when the trigger is fired
+		- Functions Premium
+			- Event based scaling and network isolation, ideal for workloads running continuously.  
+			- e.g.
+				- Process of large Datasets
+		- App service plan
+			- Fully isolated and dedicated environment suitable for workloads that need large SKUs or need to co-locate Web Apps and Functions.
+			- Use Azure function as a Full Implementation of the API Apps
+- HttpTriggers
+- BLOBTriggers
+- Durable Functions
+	- Chain
+	- FanOut/FanIn
+	- Monitor
+- Security
+- Deplopyment
+- Logic Apps
+- Availability
+	
