@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fn_First", "Fn_First\Fn_Fir
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{BFDB6AA0-48F4-4324-ACAF-9D4DB0FC1FA5}"
 	ProjectSection(SolutionItems) = preProject
+		Assignment.md = Assignment.md
 		readme.md = readme.md
+		scripts.sql = scripts.sql
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Az_FnHttpAPI", "Az_FnHttpAPI\Az_FnHttpAPI.csproj", "{9E1113B8-81D6-477B-B4C7-781203D11830}"
