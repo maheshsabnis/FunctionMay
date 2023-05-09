@@ -51,3 +51,21 @@
 - Logic Apps
 - Availability
 	
+
+# Azure Function App Development
+
+1. Configure Data Access Layer
+	- ORM
+		- Entity Framework Core (EF Core)
+			- Install Packages for the Project from dotnet CLI
+			- Install EF Global Tool
+				- dotnet tool install --global dotnet-ef
+			- Install Following Packages 
+				- dotnet add package Microsoft.EntityFrameworkCore -v 6.0.13
+				- dotnet add package Microsoft.EntityFrameworkCore.SqlServer -v 6.0.13
+				- dotnet add package Microsoft.EntityFrameworkCore.Relational -v 6.0.13
+				- dotnet add package Microsoft.EntityFrameworkCore.Design -v 6.0.13
+				- dotnet add package Microsoft.EntityFrameworkCore.Tools -v 6.0.13
+		- Generate Model Classes and Data Access using EF Core
+			- dotnet ef dbcontext scaffold "DATABASE-CONNECTION-STRING" Microsoft.EntityFrameworkCore.SqlServer -o Models
+			- dotnet ef dbcontext scaffold "Data Source=.;Initial Catalog=Company;Integrated Security=SSPI" Microsoft.EntityFrameworkCore.SqlServer -o Models
