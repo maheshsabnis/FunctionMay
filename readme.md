@@ -69,3 +69,43 @@
 		- Generate Model Classes and Data Access using EF Core
 			- dotnet ef dbcontext scaffold "DATABASE-CONNECTION-STRING" Microsoft.EntityFrameworkCore.SqlServer -o Models
 			- dotnet ef dbcontext scaffold "Data Source=.;Initial Catalog=Company;Integrated Security=SSPI" Microsoft.EntityFrameworkCore.SqlServer -o Models
+
+		- Package for Dependency Container
+			- Microsoft.Azure.Functions.Extensions
+
+# Function Authorization Level
+	- Admin
+		- aka Master, the Mastre Key is needed to call functions in App
+		- This is also known as 'host' key
+	- Function
+		- Each function will have seperate Key
+		- We can share seperate key to client to make sure that they can access only function of  which key is available with them
+	- Anonymous (No recommended)
+		- Anybody can directly access function
+		- Any Valid HTTP request can access fucntion
+# Using Azure Storage Services with Functions
+	- Create an Azure Storage Account
+		- The Service That manages Azure Storage Services
+			- Table
+				- NoSQL Data Store
+				- Schema Independant (Free) data store
+				- Accessible using TableTrigger
+			- BLOB
+				- Binary Files Stores
+					- Text, Xml, Json, Csv, Images, and Documents
+				- Page Blobs
+					- Streaming
+					- Size if More than 10 GBs
+				- BlobkBLOBS
+					- File Operations are performed by dividing the BLOB into Chunks 
+				- Accessibel using BlobTrigger
+			- Queue
+				- Messaging
+				- Binary Encoded Message
+				- 7 Days of Store
+				- Accessible using QueueTrigger
+			- Files
+				- Large Files
+				- VHD File
+		- Use the Following package to access Queue Storage
+			- Azure.Storage.Queues

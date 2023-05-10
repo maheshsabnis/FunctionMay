@@ -15,9 +15,14 @@ namespace Az_FnHttpAPI.Services
 
         ResponseObject<Department> _response;
 
-        public DepartmentService()
+        /// <summary>
+        /// COnstructor Injection
+        /// </summary>
+        /// <param name="context"></param>
+        public DepartmentService(CompanyContext context)
         {
-            _context = new CompanyContext();
+            //_context = new CompanyContext();
+            _context = context;
             _response = new ResponseObject<Department>();
         }
 

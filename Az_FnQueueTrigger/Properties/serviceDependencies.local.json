@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "appInsights1": {
+      "type": "appInsights.sdk"
+    },
+    "storage1": {
+      "type": "storage.emulator",
+      "connectionId": "AzureWebJobsStorage"
+    },
+    "secrets1": {
+      "type": "secrets.user"
+    },
+    "storage2": {
+      "secretStore": "LocalSecretsFile",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Storage/storageAccounts/maywmacc",
+      "type": "storage.azure",
+      "connectionId": "DefaultEndpointsProtocol=https;AccountName=maywmacc;AccountKey=8mNxbH8q74m/Y+B5g2b/oSNCwTDm7KknSCeH81I+xXbToP9oD2ttHPaCMWmPJxvqX9gwVQuPLCzI+AStDvRVmQ==;EndpointSuffix=core.windows.net",
+      "dynamicId": null
+    }
+  }
+}

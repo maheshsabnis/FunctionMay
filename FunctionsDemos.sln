@@ -12,7 +12,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{BFDB6AA0
 		scripts.sql = scripts.sql
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Az_FnHttpAPI", "Az_FnHttpAPI\Az_FnHttpAPI.csproj", "{9E1113B8-81D6-477B-B4C7-781203D11830}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Az_FnHttpAPI", "Az_FnHttpAPI\Az_FnHttpAPI.csproj", "{9E1113B8-81D6-477B-B4C7-781203D11830}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Az_FnQueueTrigger", "Az_FnQueueTrigger\Az_FnQueueTrigger.csproj", "{6B0D273F-2DDF-445F-BF07-B347565F2002}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,6 +30,10 @@ Global
 		{9E1113B8-81D6-477B-B4C7-781203D11830}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E1113B8-81D6-477B-B4C7-781203D11830}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E1113B8-81D6-477B-B4C7-781203D11830}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B0D273F-2DDF-445F-BF07-B347565F2002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B0D273F-2DDF-445F-BF07-B347565F2002}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B0D273F-2DDF-445F-BF07-B347565F2002}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B0D273F-2DDF-445F-BF07-B347565F2002}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

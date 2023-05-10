@@ -19,9 +19,15 @@ namespace Az_FnHttpAPI
         ResponseObject<Department> _deptResponse = null;
 
 
-        public RestAPI()
+        Messaging queueMessaging = new Messaging();
+
+        /// <summary>
+        /// Constructor Injection
+        /// </summary>
+        /// <param name="serv"></param>
+        public RestAPI(IServices<Department,int> serv)
         {
-            _deptServ = new DepartmentService();
+            _deptServ= serv;
             _deptResponse = new ResponseObject<Department>();
         }
 
@@ -61,6 +67,12 @@ namespace Az_FnHttpAPI
             // 2. Deserialize the JSON string into the Department Object
             var dept = JsonSerializer.Deserialize<Department>(resuesdtBody);
             _deptResponse = await _deptServ.CreateAsync(dept);
+
+            // Add Newly Added Department in Queue
+
+            await queueMessaging.AddMessage(JsonSerializer.Serialize(dept));
+
+
             return new OkObjectResult(_deptResponse);
         }
 

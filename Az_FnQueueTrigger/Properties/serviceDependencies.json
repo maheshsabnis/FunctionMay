@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "appInsights1": {
+      "type": "appInsights"
+    },
+    "storage1": {
+      "type": "storage",
+      "connectionId": "AzureWebJobsStorage"
+    },
+    "secrets1": {
+      "type": "secrets"
+    },
+    "storage2": {
+      "type": "storage",
+      "connectionId": "DefaultEndpointsProtocol=https;AccountName=maywmacc;AccountKey=8mNxbH8q74m/Y+B5g2b/oSNCwTDm7KknSCeH81I+xXbToP9oD2ttHPaCMWmPJxvqX9gwVQuPLCzI+AStDvRVmQ==;EndpointSuffix=core.windows.net",
+      "dynamicId": null
+    }
+  }
+}
