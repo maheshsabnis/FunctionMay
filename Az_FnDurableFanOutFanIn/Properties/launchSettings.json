@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Az_FnDurableFanOutFanIn": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7149",
+      "launchBrowser": false
+    }
+  }
+}

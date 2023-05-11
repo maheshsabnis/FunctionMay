@@ -109,3 +109,17 @@
 				- VHD File
 		- Use the Following package to access Queue Storage
 			- Azure.Storage.Queues
+# Azure Durable Functions
+	- Microsoft.Azure.WebJobs.Extensions.DurableTask
+		- OrachestrationTrigger
+			- Set an execution Context using IDurableOrchestionContext interface
+				- This is responsible for State management across Fucntions
+	- ActivityTrigger
+		- This is the Function that will be executed inside the context when it is invoked by the IDurableOrchestionContext
+	- Using Fan Out/ Fan In Pattern
+		- Use The 'Task' class
+			- A Unit of Async Opetration in .NET
+			- A Task is a Thread
+				- It has decicated operation to execute
+				- It has a isolated scope of execution
+				- The Start, Wait, WaitAll, etc. method to manages the Task
