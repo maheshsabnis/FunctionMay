@@ -14,7 +14,7 @@
       "secretStore": "LocalSecretsFile",
       "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Storage/storageAccounts/maywmacc",
       "type": "storage.azure",
-      "connectionId": "DefaultEndpointsProtocol=https;AccountName=maywmacc;AccountKey=8mNxbH8q74m/Y+B5g2b/oSNCwTDm7KknSCeH81I+xXbToP9oD2ttHPaCMWmPJxvqX9gwVQuPLCzI+AStDvRVmQ==;EndpointSuffix=core.windows.net",
+      "connectionId":  "",
       "dynamicId": null
     }
   }
